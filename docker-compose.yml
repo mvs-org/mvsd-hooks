@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  hook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment: 
+      MVSD_WS: ws://mvsd:8821/ws
+    ports: 
+        - "4000:4000"
+    links:
+        - mvsd
+
+  mvsd:
+    image: metaverse:latest
+    volumes:
+        - "./mvsd-data:/root/.metaverse"

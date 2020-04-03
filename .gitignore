@@ -1,0 +1,7 @@
+node_modules
+
+mvsd-data/mainnet
+mvsd-data/*.log
+mvsd-data/hosts.cache
+
+lib
